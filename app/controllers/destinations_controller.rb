@@ -10,23 +10,36 @@ class DestinationsController < ApplicationController
     json_response(@destination)
   end
 
+  def create
+    @destination = Destination.create(destination_params)
+    json_response(@destination)
+  end
   # def create
-  #   @quote = Quote.create(quote_params)
-  #   json_response(@quote)
+  #   @destination = Destination.find(params[:id])
+  #   @review = @destination.review.create(review_params)
+  #   json_response(@review.destination)
   # end
   #
   # def update
-  #   @quote = Quote.find(params[:id])
-  #   @quote.update(quote_params)
+  #   @destination = Destination.find(params[:id])
+  #   @destination.update(destination_params)
   # end
   #
-  # def destroy
-  #   @quote = Quote.find(params[:id])
-  #   @quote.destroy
-  # end
+  def destroy
+    @destination = Destination.find(params[:id])
+    @destination.destroy
+  end
 
   private
   def json_response(object)
     render json: object.as_json(include: :reviews), status: :ok
   end
+
+  def destination_params
+    params.require(:destination).permit(:destination)
+  end
+
+  # def review_params
+  #    params.require(:review).permit(:author, :body, :rating)
+  # end
 end
