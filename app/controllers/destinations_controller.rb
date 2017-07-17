@@ -12,7 +12,7 @@ class DestinationsController < ApplicationController
 
   def create
     @destination = Destination.create(destination_params)
-    json_response(@destination)
+    json_response(@destination, :created)
   end
   # def create
   #   @destination = Destination.find(params[:id])
@@ -20,23 +20,23 @@ class DestinationsController < ApplicationController
   #   json_response(@review.destination)
   # end
   #
-  # def update
-  #   @destination = Destination.find(params[:id])
-  #   @destination.update(destination_params)
-  # end
-  #
+  def update
+    @destination = Destination.find(params[:id])
+    @destination.update(destination_params)
+  end
+
   def destroy
     @destination = Destination.find(params[:id])
     @destination.destroy
   end
 
   private
-  def json_response(object)
-    render json: object.as_json(include: :reviews), status: :ok
+  def json_response(object, status = :ok)
+    render json: object.as_json(include: :reviews), status: status
   end
 
   def destination_params
-    params.require(:destination).permit(:destination)
+    params.permit(:location)
   end
 
   # def review_params
