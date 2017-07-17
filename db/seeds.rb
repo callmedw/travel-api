@@ -18,7 +18,7 @@ class Seed
   def generate_destinations
     30.times do |i|
       destination = Destination.create!(
-        destination: Faker::Address.city,
+        location: Faker::Address.city,
       )
 
       3.times do |i|

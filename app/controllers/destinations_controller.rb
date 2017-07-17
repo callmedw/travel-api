@@ -17,7 +17,11 @@ class DestinationsController < ApplicationController
 
   def update
     @destination = Destination.find(params[:id])
-    @destination.update(destination_params)
+    if @destination.update!(destination_params)
+      render status: 200, json: {
+        message: "UPdated yo."
+      }
+    end
   end
 
   def destroy
