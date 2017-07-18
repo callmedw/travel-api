@@ -8,7 +8,7 @@ describe "delete review route", :type => :request do
     delete "/destinations/#{destination.id}/reviews/#{review.id}"
   end
 
-  it 'destroys destination' do
+  it 'destroys review' do
     expect(response).to have_http_status 204
   end
 end
