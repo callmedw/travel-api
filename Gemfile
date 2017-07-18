@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers'
+  gem 'pry'
 end
 
 group :development do
