@@ -284,8 +284,8 @@
         null,
         null,
         1,
-        0,
-        0,
+        2,
+        2,
         null,
         null,
         1,
@@ -314,7 +314,7 @@
         null,
         1,
         1,
-        6,
+        8,
         null,
         null,
         1,
@@ -390,7 +390,7 @@
         null,
         null,
         null,
-        0,
+        2,
         null,
         null
       ],
@@ -483,6 +483,27 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/travel_api/spec/requests/get_most_reviews_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/travel_api/spec/requests/get_reviews_spec.rb": [
         1,
         null,
@@ -562,6 +583,6 @@
         null
       ]
     },
-    "timestamp": 1500419792
+    "timestamp": 1500420124
   }
 }
