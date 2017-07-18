@@ -12,7 +12,7 @@ class DestinationsController < ApplicationController
 
   def create
     @destination = Destination.create!(destination_params)
-    json_response(@destination, :created)
+    json_response(@destination, :accepted)
   end
 
   def update

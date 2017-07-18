@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "get all destinations route", :type => :request do
-  let! :destinations {FactoryGirl.create_list(:destination, 20)}
+describe "get destinations route", :type => :request do
+  let!(:destinations) {FactoryGirl.create_list(:destination, 20)}
 
   before { get '/destinations'}
 
