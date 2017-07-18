@@ -3,11 +3,11 @@ require 'rails_helper'
 describe "post destination route", :type => :request do
 
   before do
-    post '/destinations', params: { :location => 'test_location' }
+    post '/destinations', params: { :location => "your mom's house"}
   end
 
   it 'returns the location' do
-    expect(JSON.parse(response.body)['location']).to eq 'test_location'
+    expect(JSON.parse(response.body)['location']).to eq "your mom's house"
   end
 
   it 'returns created status' do
