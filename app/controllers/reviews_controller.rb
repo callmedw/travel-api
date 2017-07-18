@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
   def create
     @destination = Destination.find(params[:destination_id])
     @review = @destination.reviews.create(review_params)
-    json_response(@review.destination, :created)
+    json_response(@review.destination)
   end
 
   def update

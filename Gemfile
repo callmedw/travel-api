@@ -33,6 +33,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers'
   gem 'pry'
+  gem 'factory_girl_rails'
 end
 
 group :development do
