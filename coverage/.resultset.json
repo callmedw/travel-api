@@ -299,9 +299,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        2,
+        2,
+        2,
         null,
         null,
         null,
@@ -318,7 +318,7 @@
         null,
         null,
         1,
-        2,
+        4,
         null,
         null
       ],
@@ -545,6 +545,25 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/travel_api/spec/requests/patch_destination_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/travel_api/spec/requests/post_destination_route_spec.rb": [
         1,
         null,
@@ -583,6 +602,6 @@
         null
       ]
     },
-    "timestamp": 1500420124
+    "timestamp": 1500420669
   }
 }
