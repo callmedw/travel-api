@@ -7,6 +7,11 @@ class DestinationsController < ApplicationController
     json_response(@destinations)
   end
 
+  def most_reviews
+    @destinations = Destination.most_reviews
+    json_response(@destinations)
+  end
+
   def show
     @destination = Destination.find(params[:id])
     json_response(@destination)

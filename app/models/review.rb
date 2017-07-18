@@ -3,4 +3,6 @@ class Review < ApplicationRecord
   validates :author, presence: true
   validates :body, presence: true
   validates :rating, presence: true, numericality: true, inclusion: { in: 1..5 }
+
+  
 end
