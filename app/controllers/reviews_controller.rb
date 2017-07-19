@@ -18,7 +18,13 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
-    @review.update(review_params)
+    if current_user && current_user.id == @review.user_id
+      @review.update(review_params)
+    else
+      render status: 401, json: {
+        message: "Can't touch this."
+      }
+    end
   end
 
   def destroy
