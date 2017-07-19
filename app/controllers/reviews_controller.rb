@@ -18,13 +18,12 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
-    if current_user && current_user.id == @review.user_id
-      @review.update(review_params)
+    if @review.update(review_params)
       render status: 200, json: {
         message: "You did it!"
       }
     else
-      render status: 401, json: {
+      render status: 406, json: {
         message: "Can't touch this."
       }
     end
@@ -32,13 +31,12 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    if current_user && current_user.id == @review.user_id
-      @review.destroy
+    if @review.destroy
       render status: 200, json: {
         message: "You did it!"
       }
     else
-      render status: 401, json: {
+      render status: 406, json: {
         message: "Can't touch this."
       }
     end
@@ -53,3 +51,20 @@ class ReviewsController < ApplicationController
     params.permit(:author, :body, :rating)
   end
 end
+
+
+
+# with user authentication:
+# def update
+#   @review = Review.find(params[:id])
+#   if current_user && current_user.id == @review.user_id
+#     @review.update(review_params)
+#     render status: 200, json: {
+#       message: "You did it!"
+#     }
+#   else
+#     render status: 401, json: {
+#       message: "Can't touch this."
+#     }
+#   end
+# end
