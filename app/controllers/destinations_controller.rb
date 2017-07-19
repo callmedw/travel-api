@@ -1,4 +1,5 @@
 class DestinationsController < ApplicationController
+  before_action :authenticate_request!
 
   def index
     @destinations = Destination.all

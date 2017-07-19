@@ -6,3 +6,6 @@
 in new window `rails db:setup`
 `rails s`
 http://localhost:3000/
+
+## API Endpoints
+  * Authentication endpoint
