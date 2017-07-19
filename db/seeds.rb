@@ -10,6 +10,11 @@
 
 class Seed
 
+  user = User.new
+  user.email = 'tried@true.com'
+  user.password = 'xxxxxx'
+  user.save!
+
   def self.begin
     seed = Seed.new
     seed.generate_destinations
@@ -22,7 +27,7 @@ class Seed
       )
 
       3.times do |i|
-        destination.reviews.create(author: Faker::Food.spice, body: Faker::Simpsons.quote, rating: Faker::Number.between(1,5))
+        destination.reviews.create(author: Faker::Food.spice, body: Faker::Simpsons.quote, rating: Faker::Number.between(1,5), user_id: Faker::Number.between(1,10))
       end
     end
   end
