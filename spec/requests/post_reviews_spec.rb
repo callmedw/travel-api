@@ -12,6 +12,6 @@ describe "post review route", :type => :request do
   end
 
   it 'returns created status' do
-    expect(response).to have_http_status 200
+    expect(response).to have_http_status 201
   end
 end
