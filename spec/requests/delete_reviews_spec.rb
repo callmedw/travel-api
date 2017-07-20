@@ -9,6 +9,6 @@ describe "delete review route", :type => :request do
   end
 
   it 'destroys review' do
-    expect(response).to have_http_status 204
+    expect(response).to have_http_status 200
   end
 end
