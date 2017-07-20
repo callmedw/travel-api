@@ -575,7 +575,7 @@
       "/Users/Guest/Desktop/travel-api/app/controllers/application_controller.rb": [
         1,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -668,7 +668,7 @@
         null,
         null,
         1,
-        0,
+        1,
         0,
         null,
         null,
@@ -693,7 +693,7 @@
         null,
         1,
         1,
-        10,
+        11,
         null,
         null,
         1,
@@ -870,16 +870,16 @@
         null
       ],
       "/Users/Guest/Desktop/travel-api/spec/requests/get_destinations_exceptions_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
         null,
         null
       ],
@@ -1038,6 +1038,6 @@
         null
       ]
     },
-    "timestamp": 1500568174
+    "timestamp": 1500568263
   }
 }
